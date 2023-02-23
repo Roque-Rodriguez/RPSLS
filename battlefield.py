@@ -26,8 +26,15 @@ class Battlefield:
         print("Spock vaporizes Rock")
         print("Easy enough right!!!! Let the games begin!")
               
-     def choose_game_type(self):
-        
+    def choose_game_type(self):
+        game_type = input("Please type (one) for Single Player or (two) for Multiplayer: ")
+
+        if game_type == "one":
+            self.player_one = Human()
+            self.player_two = AI()
+        if game_type == "two":
+            self.player_one = Human()
+            self.player_two = Human()
         # Assign either a Human class to self.player_two or AI() class to self.player two depending on user game type 
         pass
 
