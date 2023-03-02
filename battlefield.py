@@ -33,9 +33,10 @@ class Battlefield:
             self.player_two = AI("Jake")
         elif game_type == "two":
             self.player_two = Human(input("Please enter your Name: "))
-        # Assign either a Human class to self.player_two or AI() class to self.player two depending on user game type 
-        pass
-
+        elif game_type != "one" or "two":
+            print("You did not choose correctly.")
+            game_type = input("Please type (one) for Single Player or (two) for Multiplayer: ")
+        
     def game_on(self):
         while self.player_one.wins <= 2 or self.player_two.wins <= 2:
             self.player_one.choose_gesture_method()
