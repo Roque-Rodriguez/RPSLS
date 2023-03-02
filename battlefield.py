@@ -43,6 +43,8 @@ class Battlefield:
             print(f"{self.player_one.name} chose {self.player_one.selected_gesture}")
             print(f"{self.player_two.name} chose {self.player_two.selected_gesture}")
 
+            if self.player_one.selected_gesture == self.player_two.selected_gesture:
+                print("This is a tie.  This will not count.  Please choose again.")
             if self.player_one.selected_gesture == "Rock" and self.player_two.selected_gesture == "Scissor":
                 print(f"{self.player_one.selected_gesture} beat {self.player_two.selected_gesture}")
                 self.player_one.wins += 1
