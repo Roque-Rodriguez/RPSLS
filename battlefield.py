@@ -27,15 +27,18 @@ class Battlefield:
         print("Easy enough right!!!! Let the games begin!")
               
     def choose_game_type(self):
-        game_type = input("Please type (one) for Single Player or (two) for Multiplayer: ")
-
-        if game_type == "one":
-            self.player_two = AI("Jake")
-        elif game_type == "two":
-            self.player_two = Human(input("Please enter your Name: "))
-        elif game_type != "one" or "two":
-            print("You did not choose correctly.")
+        user_validation = False
+        while user_validation == False:
             game_type = input("Please type (one) for Single Player or (two) for Multiplayer: ")
+
+            if game_type == "one":
+                self.player_two = AI("Jake")
+                user_validation = True
+            elif game_type == "two":
+                self.player_two = Human(input("Please enter your Name: "))
+                user_validation = True
+            else:
+                print("Wrong input")
         
     def game_on(self):
         while self.player_one.wins <= 2 or self.player_two.wins <= 2:
@@ -116,7 +119,5 @@ class Battlefield:
                 
               
        
-        # A while loop
-        # Call self.player.choose_gesture_method()
-        # Comparison Logic if self.player_one.selected_gesture == "value" and self.player_two.selected_gesture == "value" add to self.player.wins +=1
+     
       
