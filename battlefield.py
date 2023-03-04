@@ -111,10 +111,10 @@ class Battlefield:
                 self.player_two.wins += 1
 
             if self.player_one.wins == 3:
-                print(f"Congrats {self.player_one.name} WON!!!")  
+                print(f"Congrats {self.player_one.name} you have WON this match!!!")  
                 break 
             if self.player_two.wins == 3:
-                print(f"Congrats {self.player_two.name} WON!!!")  
+                print (f"Congrats {self.player_two.name} you have WON this match!!!")
                 break 
                 
               
